@@ -7,10 +7,10 @@ const Footer = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 gap-15'>
             <div>
                 <h3 className='text-2xl font-bold mb-4'>SignLearn</h3>
-                <p className='mb-4'>Built with React, TailwindCSS and MediaPipe</p>
+                <p className='mb-4 text-lg'>Built with React, TailwindCSS and MediaPipe</p>
                 <div className='flex items-center gap-2.5'>
                           <a href="https://github.com/Manmeet-20/SignLearn" target="_blank">
-                              <FaGithub className="text-xl hover:text-cyan-600 transition-all"/>
+                              <FaGithub className="text-lg hover:text-cyan-600 transition-all"/>
                           </a>
                     <span className="text-lg text:slate-400 ">Source Code</span>
                 </div>

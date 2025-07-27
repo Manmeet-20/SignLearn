@@ -10,17 +10,10 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./index.css";
 
-const notifyMsg = (type, msg) => {
-  if (type === "success") {
-    toast.success(msg);
-  } else {
-    toast.error(msg);
-  }
-};
 
 const Layout = ({ children }) => (
   <>
-    <Navbar notifyMsg={notifyMsg} />
+    <Navbar />
     {children}
     <Footer />
   </>
@@ -28,12 +21,12 @@ const Layout = ({ children }) => (
 
 function App() {
   return (
-    <div className="min-h-screen font-[Manrope] bg-[var(--color-bg)] text-white">
+    <div className="min-h-screen bg-[var(--color-bg)] text-white">
       <Routes>
         <Route
           path="/"
           element={
-            <Layout notifyMsg={notifyMsg}>
+            <Layout >
               <Home />
             </Layout>
           }
@@ -57,14 +50,6 @@ function App() {
 
       </Routes>
 
-      <ToastContainer
-        position="top-left"
-        autoClose={2000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        pauseOnHover
-      />
     </div>
   );
 }
