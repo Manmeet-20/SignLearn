@@ -35,16 +35,17 @@ const LearnFingerspelling = () => {
         </button>
       </form>
 
-      <div className="flex flex-col gap-6 items-center">
+      {/* Scrollable area on mobile */}
+      <div className="flex flex-col gap-6 items-center w-full sm:max-h-none max-h-[60vh] overflow-y-auto px-2">
         {words.map((wordLetters, wordIdx) => (
           <div
             key={wordIdx}
-            className="flex flex-wrap justify-center gap-6"
+            className="flex flex-wrap justify-center gap-6 sm:flex-row flex-col"
           >
             {wordLetters.map((letter, idx) => (
               <div
                 key={idx}
-                className="bg-gray-800 hover:bg-gray-700 text-white rounded-xl shadow-md hover:shadow-lg transition-all duration-400 p-3 flex flex-col items-center w-32 transform hover:-translate-y-1"
+                className="bg-gray-800 hover:bg-gray-700 text-white rounded-xl shadow-md hover:shadow-lg transition-all duration-400 p-3 flex flex-col items-center w-32"
               >
                 <img
                   src={`/sign/${letter}.jpeg`}

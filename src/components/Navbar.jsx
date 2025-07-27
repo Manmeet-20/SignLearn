@@ -39,7 +39,7 @@ const Navbar = () => {
         <div className="md:hidden mt-3 px-4">
           <div className="flex flex-col space-y-4 text-lg font-medium">
             <Link to="/" className="hover:text-cyan-400 transition-all" onClick={() => setToggle(false)}>Home</Link>
-            <Link to="/detect" className="hover:text-cyan-400 transition-all" onClick={() => setToggle(false)}>Detect</Link>
+            <Link to="/detect" className="hover:text-cyan-400 transition-all" onClick={() => setToggle(false)}>Sign Language Detection</Link>
             <Link to="/fingerspelling" className="hover:text-cyan-400 transition-all" onClick={() => setToggle(false)}>Learn Fingerspelling</Link>
 
           </div>
